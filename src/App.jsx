@@ -3,8 +3,9 @@ import NavbarComponent from "./components/NavbarComponent";
 import Footer from "./components/Footer";
 
 import HomePage from "./pages/HomePage";
-import Login from "./pages/Login";
-import Ulasan from "./pages/Ulasan";
+// import Login from "./pages/Login";
+// import Ulasan from "./pages/Ulasan";
+import Mitra from "./pages/Mitra";
 function App() {
   return (
     <div>
@@ -12,8 +13,8 @@ function App() {
 
       <Routes>
         <Route path="/" Component={HomePage} />
-        <Route path="/Login" Component={Login} />
-        <Route path="/Ulasan" Component={Ulasan} />
+        <Route path="/Mitra" Component={Mitra} />
+        {/* <Route path="/Ulasan" Component={Ulasan} /> */}
       </Routes>
 
       <Footer />
