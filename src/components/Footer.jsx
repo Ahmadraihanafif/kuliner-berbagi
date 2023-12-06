@@ -9,10 +9,10 @@ const Footer = () => {
           <Col lg="8">
             <h3 className="fw-bold ">Kuliner</h3>
             <p className="desc">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Laboriosam aliquam reprehenderit eius maiores deleniti
-              perferendis. Adipisci vitae deserunt, blanditiis delectus fugiat
-              aliquid et quam!
+              Eksplorasi keberagaman Kuliner Nusantara dengan cita rasa
+              Indonesia <br />
+              yang kaya akan rempah - rempah melalui ratusan rasa autentik yang
+              menggoda selera Anda!.
             </p>
             <div className="email mt-4">
               <Link className="text-decoration-none">
@@ -21,7 +21,7 @@ const Footer = () => {
               </Link>
             </div>
           </Col>
-          <Col lg="4" className="mt-lg-0 mt-5">
+          <Col lg="4" className="mt-lg-0 mt-3">
             <h5 className="fw-bold mb-3">Follow untuk info selanjutnya</h5>
             <div className="sosial mt-3">
               <i className="fa-brands fa-facebook"></i>

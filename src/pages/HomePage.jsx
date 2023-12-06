@@ -1,18 +1,13 @@
 import { Container, Row, Col } from "react-bootstrap";
-import HeroImg from "../assets/bekakak.png";
+import HeroImg from "../assets/nasi.png";
 import PetaId from "../assets/peta.png";
 
-import { kelasTerbaru, dataSwiper } from "../data/index";
-
+import { dataSwiper } from "../data/index";
+import { makanan } from "../data/makanan";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// import {
-//   MDBCarousel,
-//   MDBCarouselItem,
-//   MDBCarouselCaption,
-// } from "mdb-react-ui-kit";
-
 // Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -21,65 +16,37 @@ import { Pagination } from "swiper/modules";
 const HomePage = () => {
   return (
     <div className="homepage">
-      {/* <div>
-        <MDBCarousel showIndicators showControls fade>
-          <MDBCarouselItem itemId={1}>
-            <img
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <MDBCarouselCaption>
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </MDBCarouselCaption>
-          </MDBCarouselItem>
-
-          <MDBCarouselItem itemId={2}>
-            <img
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <MDBCarouselCaption>
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </MDBCarouselCaption>
-          </MDBCarouselItem>
-
-          <MDBCarouselItem itemId={3}>
-            <img
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <MDBCarouselCaption>
-              <h5>Third slide label</h5>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </MDBCarouselCaption>
-          </MDBCarouselItem>
-        </MDBCarousel>
-      </div> */}
       <header className="w-100 min-vh-100 d-flex align-items-center">
         <Container>
           <Row className="header-box pt-lg-5">
             <Col className="pt-5">
-              <h1 className="mb-4 ">
-                Kuliner Berbagi
-                <br />
-                <span>Ayam Bekakak</span>
-              </h1>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                cupiditate officiis, fugit optio obcaecati dolore inventore
-                saepe nisi sint. Cupiditate in iure suscipit esse unde a, enim
-                at ullam asperiores.
+              <div className="mb-4">
+                <p className="fw-bold">Cari Makan</p>
+                <h2>
+                  Jelajahi Kekayaan Rasa <br />
+                  Tanah Air
+                </h2>
+              </div>
+              <p className="mb-2">
+                Eksplorasi keberagaman Kuliner Nusantara dengan cita rasa
+                Indonesia yang kaya akan rempah - rempah melalui ratusan rasa
+                autentik yang menggoda selera Anda!.
               </p>
-              <button className="btn btn-outline-danger btn-lg rounded-1 me-2">
-                Cek Selengkapnya
-              </button>
+              <a href="/Search">
+                <button className="btn btn-outline-warning btn-lg rounded-1 me-2 ">
+                  Eksplore
+                </button>
+              </a>
+              <Col className="d-flex flex-row bd-highlight mb-0 ">
+                <p className="mb-0 fw-bold m-3 ">1052</p>
+                <p className="mb-0 fw-bold m-3">1052</p>
+                <p className="mb-0 fw-bold m-3">4.7</p>
+              </Col>
+              <Col className="d-flex m-0">
+                <p className="mb-0 m-1 ">Makanan</p>
+                <p className="mb-0 m-1">Ulasan</p>
+                <p className="mb-0 m-1 ">Rating</p>
+              </Col>
             </Col>
             <Col lg="6" className="pt-lg-0 pt-5">
               <img src={HeroImg} alt="" />
@@ -105,9 +72,11 @@ const HomePage = () => {
                 lebih dekat untuk mendapatkan penghargaan. Kami sangat
                 menghargai kontribusi Anda dalam membantu mitra kami.
               </p>
-              <button className="btn btn-outline-danger btn-lg rounded-1 me-2">
-                Cek Selengkapnya
-              </button>
+              <a href="/Ulasan">
+                <button className="btn btn-outline-warning btn-lg rounded-1 me-2 ">
+                  Review
+                </button>
+              </a>
             </Col>
           </Row>
         </Container>
@@ -116,11 +85,14 @@ const HomePage = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold">Top 10 Reviewers</h1>
+              <h5 className="text-center text-warning">Kuliner</h5>
+              <h3 className="text-center fw-bold">
+                Makanan dengan Ulasan Terbanyak
+              </h3>
             </Col>
           </Row>
           <Row>
-            {kelasTerbaru.map((kelas) => {
+            {makanan.map((kelas) => {
               return (
                 <Col
                   key={kelas.id}
@@ -142,12 +114,13 @@ const HomePage = () => {
                     <i className={kelas.star5}></i>
                   </div>
                   <h5 className="mb-5 px-3">{kelas.title}</h5>
-                  {/* <div className="ket d-flex justify-content-between align-items-center px-3">
-                    <p className="m-0 text-primary fw-bold">{kelas.price}</p>
-                    <button className="btn btn-danger rounded-1">
-                      {kelas.buy}
-                    </button>
-                  </div> */}
+                  <div className="ket d-flex justify-content-between align-items-center px-3">
+                    <a href="/Selengkapnya">
+                      <button className="btn btn-warning rounded-1 mb-4">
+                        {kelas.buy}
+                      </button>
+                    </a>
+                  </div>
                 </Col>
               );
             })}

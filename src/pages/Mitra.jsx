@@ -3,7 +3,7 @@ import { semuaKelas } from "../data/semuaKelas";
 
 const Mitra = () => {
   return (
-    <div className="mitra min-vh-100">
+    <div className="mitra">
       <Container>
         <Row>
           <Col>
@@ -41,12 +41,13 @@ const Mitra = () => {
                   <i className={kelas.star5}></i>
                 </div>
                 <h5 className="mb-5 px-3">{kelas.title}</h5>
-                {/* <div className="ket d-flex justify-content-between align-items-center px-3">
-                    <p className="m-0 text-primary fw-bold">{kelas.price}</p>
-                    <button className="btn btn-danger rounded-1">
-                      {kelas.buy}
-                    </button>
-                  </div> */}
+                <div className="ket d-flex justify-content-between align-items-center px-3">
+                  <p className="m-0 text-secondary fw-bold">{kelas.price}</p>
+
+                  <button className="btn btn-warning rounded-1 mb-2">
+                    {kelas.buy}
+                  </button>
+                </div>
               </Col>
             );
           })}
