@@ -9,11 +9,11 @@ import foto1 from "../assets/selengkapnya/foto1.jpg";
 
 function Selengkanya() {
   return (
-    <div className="container ">
+    <div className="container">
       <span className="arrow-left">&#x2190;</span>
       <span className="bold-text">Ayam Bekakak</span>
 
-      <div className="container text-center">
+      <div className="text-center mt-5">
         <div className="row align-items-start">
           <div className="col-">
             <div className="mkn">
