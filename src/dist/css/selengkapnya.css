@@ -1,0 +1,104 @@
+.bold-text {
+  font-size: 36px;
+}
+div.mkn {
+  padding: 50px;
+
+  display: flex;
+  align-items: center;
+}
+div.mkn img {
+  margin-right: 5%;
+}
+.custom-text {
+  margin-top: -10%;
+  font-size: 50px;
+  color: orange;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 40%;
+  margin-top: -15%;
+}
+
+.image-container div {
+  display: flex;
+
+  margin-bottom: 10px; /* Jarak antar gambar */
+}
+
+.image-container img {
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+  height: auto;
+}
+.checked {
+  color: orange;
+}
+.custom-div {
+  position: absolute;
+  top: 120px; /* Jarak dari atas */
+  right: 400px; /* Jarak dari kanan */
+}
+
+.rating {
+  font-size: 40px;
+  font: bold;
+}
+.custom-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.colored-text {
+  color: orange;
+  font-size: 24px;
+}
+
+.time-image {
+  display: block;
+  margin-top: -1%;
+  margin-left: 80%; /* Jarak antara teks dan gambar time */
+}
+.nadya {
+  display: block; /* Menjadikan elemen span sebagai blok agar dapat diatur margin */
+  margin-top: -70px; /* Menggeser tulisan Nadya ke atas */
+  color: orange; /* Mengubah warna tulisan menjadi orange */
+  margin-left: 15%;
+  font-size: 24px;
+}
+.time-and-text {
+  display: flex;
+  align-items: center;
+}
+
+.time-text {
+  margin-left: 100%; /* Jarak antara gambar dan tulisan */
+}
+.col-12 {
+  margin-left: -40%; /* Menggeser semua elemen di dalam kolom ke kiri sebesar 10% */
+}
+.text1 {
+  margin-left: 22%; /* Menggeser elemen ke kanan sebesar 10% */
+  color: #aea8a8;
+}
+.a {
+  margin-left: 55%; /* Menggeser elemen ke kanan sebesar 10% */
+  text-align: left;
+}
+.bintang {
+  margin-left: 17%; /* Menggeser elemen ke kanan sebesar 10% */
+  margin-top: -1%;
+}
+
+.dina {
+  display: block; /* Menjadikan elemen span sebagai blok agar dapat diatur margin */
+  margin-top: -70px; /* Menggeser tulisan Nadya ke atas */
+  color: orange; /* Mengubah warna tulisan menjadi orange */
+  margin-left: 18%;
+  font-size: 24px;
+}

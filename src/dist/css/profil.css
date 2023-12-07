@@ -1,0 +1,51 @@
+/* .navbar-nav a {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  } */
+
+.checked {
+  color: orange;
+}
+
+.custom-hr {
+  border-top: 3px solid orange;
+  border-width: 5px;
+}
+.col-2 p {
+  display: flex;
+  justify-content: space-between;
+}
+.col-2 p::after {
+  content: ":";
+  margin-left: 8px;
+}
+
+.col-2 b {
+  margin-bottom: 10%;
+  display: block;
+  font-weight: normal;
+  text-align: left;
+  margin-left: 20%;
+}
+.custom-hr {
+  border-top: 3px solid orange;
+  border-width: 5px;
+}
+
+.cards-container {
+  display: flex;
+
+  gap: 30px; /* Jarak antara card */
+  flex-wrap: wrap; /* Memungkinkan wrapping pada layout */
+}
+.card-body a.btn {
+  color: #f3f2f0;
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+}
