@@ -1,8 +1,11 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --primary-color: #fdfcf6;
+  --primary-color: #fdf6f6;
   --secondary-color: #f73c14;
   --color-text: #f3aa3c;
   --navbar-color: #ffffff;
@@ -11,7 +14,7 @@
 .navbar {
   position: fixed;
   z-index: 5;
-  padding: 15px 0 15px 0;
+  padding: 5px 0 5px 0;
   width: 100%;
   background-color: #f6f6f6;
   /* transition: all 0.2s ease;
@@ -21,7 +24,7 @@
   -o-transition: all 0.2s ease; */
 }
 .navbar .nav-link a {
-  padding: 5px 10px 5px 10px;
+  padding-left: 50px;
   font-weight: 500;
   text-decoration: none;
   color: var(--color-text);
@@ -35,6 +38,7 @@
   text-decoration: none;
   color: #000; /* warna teks normal */
   transition: color 0.3s ease; /* animasi perubahan warna */
+  align-items: center;
 }
 
 .nav-link:hover {
@@ -45,8 +49,13 @@ header {
   background-color: #f6f6f6f6;
 }
 .navbarcomponent img {
-  width: 25px; /* Sesuaikan ukuran gambar sesuai kebutuhan Anda */
+  width: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan Anda */
   height: auto;
+  
+}
+
+.navbarcomponent span{
+  color:black
 }
 
 .homepage .header-box h1 {
@@ -89,7 +98,7 @@ header {
   background-color: #f6f6f6;
 }
 .homepage .top10 {
-  background-color: var(--primary-color);
+  background-color:#f6f6f6;
   padding-bottom: 100px;
 }
 
@@ -159,7 +168,7 @@ header {
 }
 
 .homepage .review {
-  background-color: var(--primary-color);
+  background-color:#f6f6f6;
 }
 .homepage .review h1 {
   color: var(--navbar-color-text);
@@ -211,7 +220,7 @@ header {
 }
 
 .mitra {
-  background-color: var(--primary-color);
+  background-color:#f6f6f6;
   padding-bottom: 100px;
 }
 .mitra .row:nth-child(1) {
@@ -219,7 +228,7 @@ header {
   padding-bottom: 30px;
 }
 .mitra .row:nth-child(1) p {
-  width: 75%;
+  width: 100%;
 }
 
 .mitra .row:nth-child(2) {
@@ -229,7 +238,8 @@ header {
   padding-inline: 10px;
 }
 .mitra .row:nth-child(2) img {
-  height: 250px;
+  height: 200px;
+  width: auto;
 }
 .mitra .row:nth-child(2) .col {
   background-color: white;
@@ -239,6 +249,46 @@ header {
   color: gold;
 }
 .mitra .row:nth-child(2) h5 {
+  color: var(--navbar-color-text);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.DaftarMitra {
+  background-color:#f6f6f6;
+  padding-bottom: 100px;
+}
+.DaftarMitra .row:nth-child(1) {
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+.DaftarMitra .row:form {
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+.DaftarMitra .row:nth-child(1) p {
+  width: 100%;
+}
+
+.DaftarMitra .row:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding-inline: 10px;
+}
+.DaftarMitra .row:nth-child(2) img {
+  height: 250px;
+}
+.DaftarMitra .row:nth-child(2) .col {
+  background-color:#f6f6f6;
+  padding: 0;
+}
+.DaftarMitra .row:nth-child(2) .star {
+  color: gold;
+}
+.DaftarMitra .row:nth-child(2) h5 {
   color: var(--navbar-color-text);
   font-weight: bold;
   line-height: 1.2;

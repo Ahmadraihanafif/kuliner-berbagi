@@ -51,12 +51,13 @@ export const semuaKelas = [
   {
     id: 4,
     image: KelasImage4,
+    title: "Pongek Or Situjuah",
     star1: "fa-solid fa-star",
     star2: "fa-solid fa-star",
     star3: "fa-solid fa-star",
     star4: "fa-solid fa-star",
     star5: "fa-solid fa-star",
-    title: "Pongek Or Situjuah",
+    
     price: "Jam Buka 08:00 - 17:00",
     buy: "Selengkapnya",
     delay: "300",

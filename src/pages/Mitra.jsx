@@ -33,6 +33,9 @@ const Mitra = () => {
                   alt="unsplash.com"
                   className="w-100 mb-5 rounded-top"
                 />
+
+                <h5 className="mb-5 px-3">{kelas.title}</h5>
+                
                 <div className="star mb-2 px-3">
                   <i className={kelas.star1}></i>
                   <i className={kelas.star2}></i>
@@ -40,7 +43,7 @@ const Mitra = () => {
                   <i className={kelas.star4}></i>
                   <i className={kelas.star5}></i>
                 </div>
-                <h5 className="mb-5 px-3">{kelas.title}</h5>
+                
                 <div className="ket d-flex justify-content-between align-items-center px-3">
                   <p className="m-0 text-secondary fw-bold">{kelas.price}</p>
 

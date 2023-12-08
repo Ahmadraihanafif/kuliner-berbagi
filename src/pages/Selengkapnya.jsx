@@ -7,7 +7,7 @@ import phone from "../assets/selengkapnya/phone.png";
 import jam from "../assets/selengkapnya/jam.jpg";
 import foto1 from "../assets/selengkapnya/foto1.jpg";
 
-function Selengkanya() {
+function Selengkapnya() {
   return (
     <div className="container">
       <span className="arrow-left">&#x2190;</span>
@@ -149,4 +149,4 @@ function Selengkanya() {
   );
 }
 
-export default Selengkanya;
+export default Selengkapnya;

@@ -21,7 +21,6 @@ const HomePage = () => {
           <Row className="header-box pt-lg-5">
             <Col className="pt-5">
               <div className="mb-4">
-                <p className="fw-bold">Cari Makan</p>
                 <h2>
                   Jelajahi Kekayaan Rasa <br />
                   Tanah Air
@@ -33,7 +32,7 @@ const HomePage = () => {
                 autentik yang menggoda selera Anda!.
               </p>
               <a href="/Search">
-                <button className="btn btn-outline-warning btn-lg rounded-1 me-2 ">
+                <button className="btn btn-outline-warning btn-lg rounded-18 me-2">
                   Eksplore
                 </button>
               </a>

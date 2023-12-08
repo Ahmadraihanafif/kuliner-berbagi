@@ -2,7 +2,7 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Userr from "../assets/user.png";
+import Userr from "../assets/pengguna.png";
 
 import Logo from "../assets/logo.png";
 
@@ -18,7 +18,7 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
               <Nav.Link href="/">Beranda</Nav.Link>
-              <Nav.Link href="/Mitra">Kemintraan</Nav.Link>
+              <Nav.Link href="/Mitra">Kemitraan</Nav.Link>
             </Nav>
             <Form inline>
               <Row>
@@ -33,9 +33,14 @@ const NavbarComponent = () => {
                   </a> */}
                 </Col>
                 <Col xs="auto">
-                  <a href="/Profil">
-                    <img src={Userr}></img>
+                  <div>
+                    <span>Halo, Selvia Putri</span>
+                    <a href="/Profil">
+                    <img src={Userr} alt ="user profile" style={{ marginLeft: "8px" }}/>
                   </a>
+                    
+                  </div>
+                  
                 </Col>
               </Row>
             </Form>
