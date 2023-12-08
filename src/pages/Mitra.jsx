@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { semuaKelas } from "../data/semuaKelas";
+import { Link } from "react-router-dom";
 
 const Mitra = () => {
   return (
@@ -35,7 +36,7 @@ const Mitra = () => {
                 />
 
                 <h5 className="mb-5 px-3">{kelas.title}</h5>
-                
+
                 <div className="star mb-2 px-3">
                   <i className={kelas.star1}></i>
                   <i className={kelas.star2}></i>
@@ -43,13 +44,14 @@ const Mitra = () => {
                   <i className={kelas.star4}></i>
                   <i className={kelas.star5}></i>
                 </div>
-                
+
                 <div className="ket d-flex justify-content-between align-items-center px-3">
                   <p className="m-0 text-secondary fw-bold">{kelas.price}</p>
-
-                  <button className="btn btn-warning rounded-1 mb-2">
-                    {kelas.buy}
-                  </button>
+                  <Link to="/SelengkapnyaMitra">
+                    <button className="btn btn-warning rounded-1 mb-2">
+                      {kelas.buy}
+                    </button>
+                  </Link>
                 </div>
               </Col>
             );

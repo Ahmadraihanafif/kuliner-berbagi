@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-import Form from 'react-bootstrap/Form';
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import Form from "react-bootstrap/Form";
 
 
 

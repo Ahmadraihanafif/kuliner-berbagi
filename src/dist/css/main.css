@@ -1,5 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 * {
   font-family: "Poppins", sans-serif;
@@ -51,11 +50,10 @@ header {
 .navbarcomponent img {
   width: 50px; /* Sesuaikan ukuran gambar sesuai kebutuhan Anda */
   height: auto;
-  
 }
 
-.navbarcomponent span{
-  color:black
+.navbarcomponent span {
+  color: black;
 }
 
 .homepage .header-box h1 {
@@ -98,7 +96,7 @@ header {
   background-color: #f6f6f6;
 }
 .homepage .top10 {
-  background-color:#f6f6f6;
+  background-color: #f6f6f6;
   padding-bottom: 100px;
 }
 
@@ -168,7 +166,7 @@ header {
 }
 
 .homepage .review {
-  background-color:#f6f6f6;
+  background-color: #f6f6f6;
 }
 .homepage .review h1 {
   color: var(--navbar-color-text);
@@ -220,7 +218,7 @@ header {
 }
 
 .mitra {
-  background-color:#f6f6f6;
+  background-color: #f6f6f6;
   padding-bottom: 100px;
 }
 .mitra .row:nth-child(1) {
@@ -255,7 +253,7 @@ header {
 }
 
 .DaftarMitra {
-  background-color:#f6f6f6;
+  background-color: #f6f6f6;
   padding-bottom: 100px;
 }
 .DaftarMitra .row:nth-child(1) {
@@ -282,7 +280,7 @@ header {
   height: 250px;
 }
 .DaftarMitra .row:nth-child(2) .col {
-  background-color:#f6f6f6;
+  background-color: #f6f6f6;
   padding: 0;
 }
 .DaftarMitra .row:nth-child(2) .star {
@@ -324,4 +322,10 @@ header {
 .daftarmitra {
   padding-top: 120px;
   margin-bottom: 30px;
+}
+.SelMitra {
+  padding-top: 130px;
+}
+.SelMitra .star {
+  color: gold;
 }
