@@ -12,8 +12,8 @@ function DaftarMitra () {
     return (
         <div className="DaftarMitra">
           <Container>
-            <row>
-              <>
+            <Row>
+              <Col>
                 <h2 className="fw-bold text-start">Daftar Kemitraan</h2>
                
                 <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
@@ -71,9 +71,9 @@ function DaftarMitra () {
     
   
               
-             
-            </row>
-           </Col>
+             </Col>
+            </Row>
+           
           </Container>
         </div>
     );
