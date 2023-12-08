@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
@@ -9,8 +9,9 @@ import Regis from "./pages/regis";
 import Search from "./pages/Search";
 import Profil from "./pages/profil";
 import Ulasan from "./pages/Ulasan";
-import Selengkapnya from "./pages/Selengkapnya";
 import DaftarMitra from "./pages/DaftarMitra";
+import Selengkapnya from "./pages/Selengkapnya";
+import SelengkapnyaMitra from "./pages/SelengkapnyaMitra";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           </Layout>
         }
       />
-    
+
       <Route
         path="/Search"
         element={
@@ -61,6 +62,14 @@ function App() {
         element={
           <Layout>
             <Selengkapnya />
+          </Layout>
+        }
+      />
+      <Route
+        path="/SelengkapnyaMitra"
+        element={
+          <Layout>
+            <SelengkapnyaMitra />
           </Layout>
         }
       />
