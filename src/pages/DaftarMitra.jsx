@@ -5,30 +5,21 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Form from "react-bootstrap/Form";
 
+
 function DaftarMitra () {
-  const [isChecked, setIsChecked] = useState(false);
-  const [activeTab, setActiveTab] = useState('persyaratan');
+  const [validated, setValidated] = useState(false);
 
-  const handleTabSelect = (tabKey) => {
-    setActiveTab(tabKey);
-  };
-
-  const handleNextButtonClick = () => {
-    // Logika untuk menangani tombol Berikutnya di sini
-    // Contoh: Pindah ke tab datadiri jika persyaratan telah disetujui
-    if (isChecked) {
-      setIsChecked('datadiri');
-    } else {
-      // Tampilkan pesan kesalahan atau lakukan logika lain jika diperlukan
-      console.error('Anda harus menyetujui persyaratan sebelum melanjutkan.');
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
     }
+
+    setValidated(true);
   };
 
-  const handleFormSubmit = () => {
-    // Logika untuk menangani pengiriman formulir di sini
-    // Contoh: Tampilkan data yang diisi ke konsol
-    console.log('Data diri terkirim:', formData);
-  };
+  
 
   return (
     <div className="DaftarMitra">
@@ -36,7 +27,7 @@ function DaftarMitra () {
         <Row>
           <Col>
             <h2 className="fw-bold text-start">Daftar Kemitraan</h2>
-            <Tabs defaultActiveKey="persyaratan" id="uncontrolled-tab-example" className="mb-3" onSelect={handleTabSelect}>
+            <Tabs defaultActiveKey="persyaratan" id="uncontrolled-tab-example" className="mb-3" >
 
               <Tab eventKey="persyaratan" title="Persyaratan" >
                 <p>
@@ -79,17 +70,19 @@ function DaftarMitra () {
                   </li>
                 </ul>
 
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check
-                    type="checkbox"
-                    label="Saya setuju atas persyaratan yang CariMakan berikan untuk berkolaborasi dengan rumah makan yang telah saya pilih."
-                    onChange={() => setIsChecked(e.target.checked)}
-                  ></Form.Check>
-                </Form.Group>
-                
-                  <Button variant="outline-warning" onClick={handleNextButtonClick} >
-                  Berikutnya
-                  </Button>
+                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      
+      <Form.Group className="mb-3">
+        <Form.Check
+          required
+          label="Saya setuju atas persyaratan yang CariMakan berikan untuk berkolaborasi dengan rumah makan yang telah saya pilih. "
+          feedback="Centang apabila setuju."
+          feedbackType="invalid"
+        />
+      </Form.Group>
+      <Button variant="outline-warning" type="submit">Berikutnya</Button>
+    </Form>
+     
                 
               </Tab>
               
@@ -97,7 +90,7 @@ function DaftarMitra () {
               <Tab eventKey="datadiri" title="Isi Data Diri">
                 <h5>Lengkapi data diri Anda</h5>
             
-                <Form onSubmit={handleFormSubmit}>
+                <Form>
                   <Row className="mb-1 pt-3">
                     <Col>
                       <Form.Group controlId="formGridEmail">
