@@ -9,9 +9,10 @@ const SelengkapnyaMitra = () => {
       <Container>
         <Row>
           <Col xs={5}>
+            <h4>Pongek Or</h4>
             <img className="w-100 p-3 shadow rouded" src={mitra1} alt="" />
           </Col>
-          <Col xs={4}>
+          <Col xs={4} >
             <h5 className="fw-bold">Informasi Rumah Makan</h5>
             <div className="d-flex flex-column">
               <p>Alamat : Jl. Khatib Sulaiman , Payakumbuh</p>
