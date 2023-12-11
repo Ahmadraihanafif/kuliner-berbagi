@@ -49,7 +49,7 @@ export const kelasTerbaru = [
     title: "Sate Kambing Muda ",
     price: "Rp. 300.000",
     buy: "Selengkapnya",
-    delay: "",
+    //delay: "",
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ export const kelasTerbaru = [
     title: "Soto Tangkar ",
     price: "Rp. 340.000",
     buy: "Selengkapnya",
-    delay: "200",
+    //delay: "200",
   },
   {
     id: 3,
@@ -75,7 +75,7 @@ export const kelasTerbaru = [
     title: "Ayam Bekakak",
     price: "Rp. 280.000",
     buy: "Selengkapnya",
-    delay: "400",
+    //delay: "400",
   },
   // {
   //   id: 4,

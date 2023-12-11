@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import { semuaKelas } from "../data/semuaKelas";
 const HomePage = () => {
   return (
     <div className="homepage">
@@ -90,40 +91,63 @@ const HomePage = () => {
               </h3>
             </Col>
           </Row>
-          <Row>
-            {makanan.map((kelas) => {
-              return (
-                <Col
-                  key={kelas.id}
-                  className="shadow rouded"
-                  data-aos="fade-down"
-                  data-aos-duration="1000"
-                  data-aos-delay={kelas.delay}
-                >
+          <Row className="grid">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 50,
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: 50,
+                },
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {makanan.map((semuaKelas) => {
+                return (
+                  <SwiperSlide 
+                    key={semuaKelas.id} 
+                    className="shadow-rounded"
+                  >
                   <img
-                    src={kelas.image}
+                    src={semuaKelas.image}
                     alt="unsplash.com"
-                    className="w-100 mb-5 rounded-top"
+                    className="w-100 mb-3 rounded-top rounded-bottom"
                   />
-                  <div className="star mb-2 px-3">
-                    <i className={kelas.star1}></i>
-                    <i className={kelas.star2}></i>
-                    <i className={kelas.star3}></i>
-                    <i className={kelas.star4}></i>
-                    <i className={kelas.star5}></i>
-                  </div>
-                  <h5 className="mb-5 px-3">{kelas.title}</h5>
+                  <h5 className="mb-2 px-3">{semuaKelas.title}</h5>
+                  <h6 className="mb-2 px-3">{semuaKelas.desc}</h6>
+                  <p className="mb-2 px-3">{semuaKelas.ulasan}</p>
+                  
                   <div className="ket d-flex justify-content-between align-items-center px-3">
                     <a href="/Selengkapnya">
-                      <button className="btn btn-warning rounded-1 mb-4">
-                        {kelas.buy}
+                      <button className="btn btn-outline-warning rounded-15 mb-4">
+                        {semuaKelas.buy}
                       </button>
                     </a>
                   </div>
-                </Col>
-              );
-            })}
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </Row>
+        
+
         </Container>
       </div>
       <div className="review py-5">
@@ -164,12 +188,15 @@ const HomePage = () => {
               {dataSwiper.map((data) => {
                 return (
                   <SwiperSlide key={data.id} className="shadow-sm">
-                    <p className="desc">{data.desc}</p>
-                    <div className="people">
+                     <div className="people">
                       <img src={data.image} alt="" />
                       <div>
-                        <h5 className="mb-1">{data.name}</h5>
-                        <p className="m-0 fw-bold">{data.skill}</p>
+                      <h5 className="mb-1">{data.name}</h5>
+                      <p className="m-0 fw-bold">{data.skill}</p>
+                    <p className="desc">{data.desc}</p>
+                   
+                       
+                        
                       </div>
                     </div>
                   </SwiperSlide>

@@ -15,7 +15,7 @@ export const mitra = [
     price:
       "Ketan Srikaya merupakan kue tradisional yang memiliki cita rasa manis dan gurih",
     buy: "Selengkapnya",
-    delay: "100",
+    //delay: "100",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const mitra = [
     price:
       "Ayam yang diungkep dengan bumbu sederhana, kemudian digoreng dan ditumis dengan bumbu balado pedas",
     buy: "Selengkapnya",
-    delay: "200",
+    //delay: "200",
   },
   {
     id: 3,
@@ -43,6 +43,6 @@ export const mitra = [
     price:
       "Irisan tipis daging sapi yang lembut dengan perpaduan bumbu rempah pedas khas Sumatera Barat",
     buy: "Selengkapnya",
-    delay: "300",
+    //delay: "300",
   },
 ];
