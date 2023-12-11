@@ -5,13 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Mitra from "./pages/Mitra";
-import Regis from "./pages/regis";
 import Search from "./pages/Search";
 import Profil from "./pages/profil";
 import Ulasan from "./pages/Ulasan";
 import DaftarMitra from "./pages/DaftarMitra";
 import Selengkapnya from "./pages/Selengkapnya";
 import SelengkapnyaMitra from "./pages/SelengkapnyaMitra";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -81,6 +81,7 @@ function App() {
           </Layout>
         }
       />
+      <Route path="/Register" element={<Register />} />
       {/* Halaman Login tidak memerlukan Navbar dan Footer */}
       <Route path="/Login" element={<Login />} />
       <Route
@@ -88,7 +89,7 @@ function App() {
         element={
           <Layout>
             <Login />
-            <Regis />
+            <Register />
           </Layout>
         }
       />
