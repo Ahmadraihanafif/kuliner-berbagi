@@ -12,9 +12,9 @@ function Profil() {
   return (
     <div>
       <div className="container ">
-        <div className="row align-items-start ">
+        <div className="row align-items-start pt-5">
           <div className="col-3">
-            <h1>Profil Pengguna</h1>
+            <h2>Profil Pengguna</h2>
             <img src={pengguna} alt="" />
           </div>
           <div className="col align-self-center" style={{ marginBottom: "1%" }}>
@@ -50,7 +50,7 @@ function Profil() {
         </div>
       </div>
 
-      <div className="container text-center">
+      <div className="container text-left">
         <div className="row align-items-start">
           <div className="col-">
             <h3 className="claim-title">Klaim Hadiah Anda Sekarang!</h3>
@@ -89,29 +89,7 @@ function Profil() {
             </div>
           </div>
 
-          <div className="card" style={{ width: "18rem" }}>
-            <img src={makanan3} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p>Voucher Diskon </p>
-              <h5 className="card-title">Ayam Bekakak 15%</h5>
-              <p className="card-text">Klaim voucher ini dengan 30 koin! </p>
-              <a href="#" className="btn btn-primary">
-                Klaim
-              </a>
-            </div>
-          </div>
-
-          <div className="card" style={{ width: "18rem" }}>
-            <img src={makanan4} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p>Voucher Diskon </p>
-              <h5 className="card-title">Sate Kambing Muda 10%</h5>
-              <p className="card-text">Klaim voucher ini dengan 20 koin! </p>
-              <a href="#" className="btn btn-primary">
-                Klaim
-              </a>
-            </div>
-          </div>
+       
         </div>
       </div>
     </div>

@@ -1,9 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Form from "react-bootstrap/Form";
+
 
 
 function DaftarMitra () {
@@ -82,11 +84,8 @@ function DaftarMitra () {
       </Form.Group>
       <Button variant="outline-warning" type="submit">Berikutnya</Button>
     </Form>
-     
-                
-              </Tab>
-              
-            
+     </Tab>
+
               <Tab eventKey="datadiri" title="Isi Data Diri">
                 <h5>Lengkapi data diri Anda</h5>
             
@@ -122,9 +121,11 @@ function DaftarMitra () {
                       </Form.Group>
                     </Col>
                   </Row>
+                  
                 <Button variant="outline-warning" type="submit">
                   Kirim
                 </Button>
+                
                 </Form>
               </Tab>
               </Tabs>

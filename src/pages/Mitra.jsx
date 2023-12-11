@@ -8,7 +8,7 @@ const Mitra = () => {
       <Container>
         <Row>
           <Col>
-            <h2 className="fw-bold text-start">Rekomendasi Rumah Makan</h2>
+            <h2 className="">Rekomendasi Rumah Makan</h2>
             <p className="text-start">
               Dengan adanya fitur <span className="fw-bold">Kemitraan</span>,
               kami memudahkan food vlogger untuk dapat berkolaborasi bersama
