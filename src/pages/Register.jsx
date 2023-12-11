@@ -1,11 +1,10 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import logo from "../assets/profil/logo.png";
-import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
 import FB from "../assets/Fb.png";
 import google from "../assets/google.png";
-
-const Login = () => {
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+const Register = () => {
   const handleClick = () => {
     Swal.fire({
       title: "Login Successful!",
@@ -18,7 +17,7 @@ const Login = () => {
     });
   };
   return (
-    <div className="login">
+    <div className="register">
       <Container>
         <Row
           className="justify-content-center align-items-center"
@@ -31,11 +30,16 @@ const Login = () => {
           >
             {/* Logo */}
             <div className="text-center mb-4">
-              <img src={logo} alt="Logo" height="200" />
+              <img src={logo} alt="Logo" height="100" />
             </div>
 
-            {/* Login Form */}
+            {/* Register Form */}
             <Form>
+              <Form.Group controlId="formName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your name" />
+              </Form.Group>
+
               <Form.Group controlId="formEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -45,34 +49,32 @@ const Login = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
+
+              <Form.Group controlId="formConfirmPassword">
+                <Form.Label>Confirm Password</Form.Label>
+                <Form.Control type="password" placeholder="Confirm Password" />
+              </Form.Group>
+
               <Link to="/">
                 <Button
                   type="submit"
                   className="w-100 mt-3 btn btn-warning"
                   onClick={() => handleClick()}
                 >
-                  Login
+                  Daftar
                 </Button>
               </Link>
             </Form>
 
-            {/* Register Link */}
-            <p className="text-center mt-3">
-              Don`t have an account?{" "}
-              <Link to="/Register" className="text-primary">
-                Register here
-              </Link>
-            </p>
-
             {/* Social Login */}
             <div className="text-center mt-3">
               <Button variant="outline-dark" className="mr-2 mb-2">
-                <img src={google} alt="Google" height="20" className="mr-2 " />
-                Login with Google
+                <img src={google} alt="Google" height="20" className="mr-2" />
+                Register with Google
               </Button>
               <Button variant="outline-primary">
                 <img src={FB} alt="Facebook" height="20" className="mr-2" />
-                Login with Facebook
+                Register with Facebook
               </Button>
             </div>
           </Col>
@@ -82,4 +84,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
