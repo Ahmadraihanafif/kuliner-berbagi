@@ -5,8 +5,7 @@ import Button from "react-bootstrap/Button";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Form from "react-bootstrap/Form";
-
-
+import Swal from "sweetalert2";
 
 function DaftarMitra () {
   const [validated, setValidated] = useState(false);
@@ -21,7 +20,17 @@ function DaftarMitra () {
     setValidated(true);
   };
 
-  
+  const handleClick = () => {
+    Swal.fire({
+      title: "Login Successful!",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        history.push("/DaftarMitra");
+      }
+    });
+  };
 
   return (
     <div className="DaftarMitra">
@@ -122,8 +131,10 @@ function DaftarMitra () {
                     </Col>
                   </Row>
                   
-                <Button variant="outline-warning" type="submit">
+                <Button variant="outline-warning" type="submit" onClick={() => handleClick()}
+                >
                   Kirim
+                  
                 </Button>
                 
                 </Form>

@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="email mt-4">
               <Link className="text-decoration-none">
                 <i className="fa-regular fa-envelope"></i>
-                <p className="m-0">kuliner.indonesia@gmail.com</p>
+                <p className="m-0">carimakan@gmail.com</p>
               </Link>
             </div>
           </Col>
@@ -35,7 +35,7 @@ const Footer = () => {
           <Col>
             <p className="text-center px-md-0 px-3">
               &copy; Copyright {new Date().getFullYear()} by
-              <span className="fw-bold"> Kuliner indonesia</span>, All Right
+              <span className="fw-bold"> Cari Makan</span>, All Right
               Reserved
             </p>
           </Col>

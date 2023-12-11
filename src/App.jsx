@@ -2,12 +2,15 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Mitra from "./pages/Mitra";
 import Search from "./pages/Search";
-import Profil from "./pages/profil";
+import UserProfil from "./pages/UserProfil";
+import Profil from "./pages/Profil";
 import Ulasan from "./pages/Ulasan";
+import Review from "./pages/Review";
 import DaftarMitra from "./pages/DaftarMitra";
 import Selengkapnya from "./pages/Selengkapnya";
 import SelengkapnyaMitra from "./pages/SelengkapnyaMitra";
@@ -16,6 +19,14 @@ import Register from "./pages/Register";
 function App() {
   return (
     <Routes>
+      <Route
+        path="/LandingPage"
+        element={
+          <Layout>
+            <LandingPage />
+          </Layout>
+        }
+      />
       <Route
         path="/"
         element={
@@ -42,6 +53,14 @@ function App() {
         }
       />
       <Route
+        path="/UserProfil"
+        element={
+          <Layout>
+            <UserProfil />
+          </Layout>
+        }
+      />
+      <Route
         path="/Profil"
         element={
           <Layout>
@@ -54,6 +73,14 @@ function App() {
         element={
           <Layout>
             <Ulasan />
+          </Layout>
+        }
+      />
+      <Route
+        path="/Review"
+        element={
+          <Layout>
+            <Review />
           </Layout>
         }
       />

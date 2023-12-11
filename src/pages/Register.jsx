@@ -4,6 +4,7 @@ import FB from "../assets/Fb.png";
 import google from "../assets/google.png";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+
 const Register = () => {
   const handleClick = () => {
     Swal.fire({
@@ -21,38 +22,39 @@ const Register = () => {
       <Container>
         <Row
           className="justify-content-center align-items-center"
-          style={{ height: "100vh" }}
+          style={{ height: "100vh", width:"250vh"}}
         >
           <Col
             md={4}
             className="rounded p-3"
-            style={{ backgroundColor: "#f8f9fa" }}
+            style={{ backgroundColor: "#f6f6f6" }}
           >
             {/* Logo */}
             <div className="text-center mb-4">
               <img src={logo} alt="Logo" height="100" />
+              <h4>Cari Makan</h4>
             </div>
 
             {/* Register Form */}
             <Form>
               <Form.Group controlId="formName">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" />
+                <Form.Label>Nama</Form.Label>
+                <Form.Control type="text" placeholder="Masukkan Nama" />
               </Form.Group>
 
               <Form.Group controlId="formEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="Masukkan Email" />
               </Form.Group>
 
               <Form.Group controlId="formPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Label>Kata Sandi</Form.Label>
+                <Form.Control type="password" placeholder="Masukkan Kata Sandi" />
               </Form.Group>
 
               <Form.Group controlId="formConfirmPassword">
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control type="password" placeholder="Confirm Password" />
+                <Form.Label>Konfirmasi Kata Sandi</Form.Label>
+                <Form.Control type="password" placeholder="Masukkan Ulang Kata Sandi" />
               </Form.Group>
 
               <Link to="/">
