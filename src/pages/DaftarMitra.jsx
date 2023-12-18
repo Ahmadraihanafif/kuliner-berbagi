@@ -22,7 +22,7 @@ function DaftarMitra () {
 
   const handleClick = () => {
     Swal.fire({
-      title: "Login Successful!",
+      title: "Permintaan anda berhasil dikirim!",
       icon: "success",
       confirmButtonText: "OK",
     }).then((result) => {

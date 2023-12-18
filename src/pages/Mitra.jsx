@@ -22,17 +22,17 @@ const Mitra = () => {
         <Row>
           {semuaKelas.map((kelas) => {
             return (
-              <Col
+              <Col 
                 key={kelas.id}
                 className="shadow rouded"
-                data-aos="fade-down"
-                data-aos-duration="1000"
-                data-aos-delay={kelas.delay}
+                //data-aos="fade-down"
+                //data-aos-duration="1000"
+                //data-aos-delay={kelas.delay}
               >
                 <img
                   src={kelas.image}
                   alt="unsplash.com"
-                  className="w-100 mb-5 rounded-top"
+                  className="w-100 mb-3 rounded-top rounded bottom"
                 />
 
                 <h5 className="mb-5 px-3">{kelas.title}</h5>

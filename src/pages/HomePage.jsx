@@ -14,18 +14,19 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 import { semuaKelas } from "../data/semuaKelas";
+
 const HomePage = () => {
   return (
     <div className="homepage">
       <header className="w-100 min-vh-100 d-flex align-items-center">
         <Container>
-          <Row className="header-box pt-lg-5">
-            <Col className="pt-5">
+          <Row className="header-box pt-lg-3">
+            <Col className="pt-1">
               <div className="mb-4">
-                <h2>
+                <h1>
                   Jelajahi Kekayaan Rasa <br />
                   Tanah Air
-                </h2>
+                </h1>
               </div>
               <p className="mb-2">
                 Eksplorasi keberagaman Kuliner Nusantara dengan cita rasa
@@ -54,6 +55,8 @@ const HomePage = () => {
           </Row>
         </Container>
       </header>
+
+
       <div className="peta">
         <Container>
           <Row>
@@ -61,7 +64,7 @@ const HomePage = () => {
               <img src={PetaId} alt="" />
             </Col>
             <Col className="pt-5">
-              <h1 className="mb-4 ">
+              <h1 className="mb-4">
                 Bagikan ulasan dan
                 <br />
                 <span className="fw-bold"> klaim hadiah !</span>
@@ -81,6 +84,7 @@ const HomePage = () => {
           </Row>
         </Container>
       </div>
+
       <div className="top10">
         <Container>
           <Row>
@@ -91,7 +95,7 @@ const HomePage = () => {
               </h3>
             </Col>
           </Row>
-          <Row className="grid">
+          <Row>
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
@@ -121,40 +125,39 @@ const HomePage = () => {
             >
               {makanan.map((semuaKelas) => {
                 return (
-                  <SwiperSlide 
-                    key={semuaKelas.id} 
-                    className="shadow-rounded"
-                  >
-                  <img
-                    src={semuaKelas.image}
-                    alt="unsplash.com"
-                    className="w-100 mb-3 rounded-top rounded-bottom"
-                  />
-                  <h5 className="mb-2 px-3">{semuaKelas.title}</h5>
-                  <h6 className="mb-2 px-3">{semuaKelas.desc}</h6>
-                  <p className="mb-2 px-3">{semuaKelas.ulasan}</p>
-                  
-                  <div className="ket d-flex justify-content-between align-items-center px-3">
-                    <a href="/Selengkapnya">
-                      <button className="btn btn-outline-warning rounded-15 mb-4">
-                        {semuaKelas.buy}
-                      </button>
-                    </a>
-                  </div>
+                  <SwiperSlide key={semuaKelas.id} className="shadow-rounded">
+                    <img
+                      src={semuaKelas.image}
+                      alt="unsplash.com"
+                      className="w-100 mb-3 rounded-top rounded-bottom"
+                    />
+                    <h5 className="mb-2 px-3">{semuaKelas.title}</h5>
+                    <h6 className="mb-2 px-3">{semuaKelas.desc}</h6>
+                    <p className="mb-3 px-3">{semuaKelas.ulasan}</p>
+                    <div className="button justify-content-between align-items-center mx-4 px-5">
+                      <a href="/Selengkapnya">
+                        <button className="btn btn-outline-warning rounded-15 mb-2">
+                          {semuaKelas.buy}
+                        </button>
+                      </a>
+                    </div>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
           </Row>
-        
-
         </Container>
       </div>
-      <div className="review py-5">
+
+
+      <div className="review">
         <Container data-aos="fade-down">
           <Row>
             <Col>
-              <h2 className="text-center fw-bold my-5">Review</h2>
+              <h5 className="text-center text-warning">Ulasan</h5>
+              <h3 className="text-center fw-bold">
+                Pecinta Kuliner
+              </h3>
             </Col>
           </Row>
           <Row>
@@ -185,18 +188,22 @@ const HomePage = () => {
               modules={[Pagination]}
               className="mySwiper"
             >
-              {dataSwiper.map((data) => {
+              {dataSwiper.map((data,kelas)=> {
                 return (
-                  <SwiperSlide key={data.id} className="shadow-sm">
+                  <SwiperSlide key={data.id} className="shadow-rounded">
                      <div className="people">
                       <img src={data.image} alt="" />
                       <div>
-                      <h5 className="mb-1">{data.name}</h5>
-                      <p className="m-0 fw-bold">{data.skill}</p>
-                    <p className="desc">{data.desc}</p>
-                   
-                       
-                        
+                      <h5 className="mb-2 mx-3">{data.name}</h5>
+                      <h6 className="mb-2 mx-3">{data.skill}</h6>
+                      <p className="desc mx-3">{data.desc}</p>
+                          <div className="star mb-2 px-3"> 
+                            <i className={kelas.star1}></i>
+                            <i className={kelas.star2}></i>
+                            <i className={kelas.star3}></i>
+                            <i className={kelas.star4}></i>
+                            <i className={kelas.star5}></i>
+                          </div>
                       </div>
                     </div>
                   </SwiperSlide>

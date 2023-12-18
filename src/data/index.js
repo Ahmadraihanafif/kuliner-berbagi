@@ -201,7 +201,7 @@ export const dataSwiper = [
   },
   {
     id: 3,
-    desc: "tempatnya enak , makanan oke banget.. top. kalo ditambah pake misty fan lebih mantap, biar adem...sosisnya ak suka.",
+    desc: "Tempatnya enak, makanan oke banget. Kalo ditambah pake misty fan lebih mantap, biar adem...sosisnya ak suka",
     image: People3,
     name: "Riko",
     skill: "96 Ulasan",

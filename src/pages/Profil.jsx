@@ -10,7 +10,7 @@ import makanan4 from "../assets/profil/makanan4.png";
 
 function Profil() {
   return (
-    <div>
+    <div className="profil">
       <div className="container ">
         <div className="row align-items-start pt-5">
           <div className="col-3">

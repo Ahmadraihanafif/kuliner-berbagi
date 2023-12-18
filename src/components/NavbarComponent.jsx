@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Userr from "../assets/pengguna.png";
-
 import Logo from "../assets/logo.png";
 
 const NavbarComponent = () => {
@@ -12,7 +11,7 @@ const NavbarComponent = () => {
       <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="/">
-            <img className="w-25" src={Logo} alt="" />
+            <img src={Logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -23,24 +22,12 @@ const NavbarComponent = () => {
             <Form inline>
               <Row>
                 <Col xs="auto">
-                  {/* <Form.Control
-                    type="text"
-                    placeholder="Search"
-                    className=" mr-sm-2"
-                  /> */}
-                  {/* <a href="/Search">
-                    <img src={Search} alt="" />
-                  </a> */}
-                </Col>
-                <Col xs="auto">
                   <div>
                     <span>Halo, Selvia Putri</span>
                     <a href="/Profil">
                     <img src={Userr} alt ="user profile" style={{ marginLeft: "8px" }}/>
                   </a>
-                    
                   </div>
-                  
                 </Col>
               </Row>
             </Form>
