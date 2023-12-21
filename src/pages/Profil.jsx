@@ -5,19 +5,23 @@ import person from "../assets/profil/person.png";
 import box from "../assets/profil/box.png";
 import makanan1 from "../assets/profil/makanan1.png";
 import makanan2 from "../assets/profil/makanan2.png";
-import makanan3 from "../assets/profil/makanan3.png";
-import makanan4 from "../assets/profil/makanan4.png";
+// import makanan3 from "../assets/profil/makanan3.png";
+// import makanan4 from "../assets/profil/makanan4.png";
+import { Link } from "react-router-dom";
 
 function Profil() {
   return (
     <div className="profil">
       <div className="container ">
-        <div className="row align-items-start pt-5">
+        <div className="row align-items-start pt-5 ">
           <div className="col-3">
             <h2>Profil Pengguna</h2>
-            <img src={pengguna} alt="" />
+            <img className="mt-4" src={pengguna} alt="" />
           </div>
-          <div className="col align-self-center" style={{ marginBottom: "1%" }}>
+          <div
+            className="col align-self-center mt-5"
+            style={{ marginBottom: "1%" }}
+          >
             <h1>Selvia Putri</h1>
             <h2>Mahasiswa</h2>
             <p>Aktivitas</p>
@@ -28,25 +32,33 @@ function Profil() {
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
             (10)
-            <p>
+            <p className="mt-4">
               <img src={coin} alt="Coins" />
+
               <strong>500</strong>
             </p>
           </div>
         </div>
+        <div className="mt-4"></div>
       </div>
-
       <div className="container text-center" style={{ paddingTop: "5%" }}>
         <div className="row align-items-start">
           <div className="col-2">
-            <img src={person} alt="Tentang" />
-            Tentang
+            <a href="/UserProfil" className="linkTentang">
+              <img src={person} alt="Tentang" />
+              Tentang
+            </a>
           </div>
           <div className="col-2">
             <img src={box} alt="Penghargaan" />
-            <strong> Penghargaan</strong>
+            <span> Penghargaan</span>
           </div>
-          <hr className="custom-hr" />
+          <div className="col-2 mb-2">
+            <Link to="/Login">
+              <button className="btn btn-danger">Log out</button>
+            </Link>
+          </div>
+          <hr className="custom-hr mt-1" />
         </div>
       </div>
 
@@ -88,8 +100,6 @@ function Profil() {
               </a>
             </div>
           </div>
-
-       
         </div>
       </div>
     </div>

@@ -62,7 +62,7 @@ const Search = () => {
   return (
     <Container className="Search">
       <Row>
-        <Col xs={3}>
+        <Col xs={2}>
           <Form.Group>
             <Form.Label>
               <h4>Pulau</h4>
@@ -134,13 +134,13 @@ const Search = () => {
             ))}
           </Form.Group>
         </Col>
-        <Col xs={9}>
+        <Col xs={10}>
           <Row>
             {makanan.map((kelas) => {
               return (
                 <Col
                   key={kelas.id}
-                  className="Lol shadow rounded mw-100 "
+                  className="Lol shadow rounded mw-100 w-40 "
                   data-aos="fade-down"
                   data-aos-duration="1000"
                   data-aos-delay={kelas.delay}
@@ -150,15 +150,16 @@ const Search = () => {
                     alt="unsplash.com"
                     className="w-100 mb-1 p-1 rounded-top "
                   />
-                  <div className=" star px-3">
+                  {/* <div className=" star px-3">
                     <i className={kelas.star1}></i>
                     <i className={kelas.star2}></i>
                     <i className={kelas.star3}></i>
                     <i className={kelas.star4}></i>
                     <i className={kelas.star5}></i>
-                  </div>
-                  <h5 className="mb-1 px-3">{kelas.title}</h5>
+                  </div> */}
+                  <h5 className="mb-1 ">{kelas.title}</h5>
                   <span className="mb-2 text-start">{kelas.desc}</span>
+                  <p className="mt-2 gold">{kelas.ulasan}</p>
                   <div className="ket d-flex justify-content-between align-items-center px-3">
                     <a href="">
                       <button className="btn btn-warning rounded-1 mb-2 mt-3">

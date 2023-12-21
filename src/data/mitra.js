@@ -27,7 +27,7 @@ export const mitra = [
     star5: "fa-solid fa-star-half-stroke",
     title: "Ayam Balado",
     price:
-      "Ayam yang diungkep dengan bumbu sederhana, kemudian digoreng dan ditumis dengan bumbu balado pedas",
+      "Ayam yang diungkep dengan bumbu sederhana,digoreng dan ditumis dengan bumbu balado",
     buy: "Selengkapnya",
     //delay: "200",
   },
@@ -41,7 +41,7 @@ export const mitra = [
     star5: "fa-solid fa-star",
     title: "Dendeng Batokok",
     price:
-      "Irisan tipis daging sapi yang lembut dengan perpaduan bumbu rempah pedas khas Sumatera Barat",
+      "Irisan tipis daging sapi dengan perpaduan bumbu rempah pedas khas Sumatera Barat",
     buy: "Selengkapnya",
     //delay: "300",
   },

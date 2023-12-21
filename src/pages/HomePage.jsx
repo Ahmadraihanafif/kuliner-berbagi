@@ -6,6 +6,7 @@ import { dataSwiper } from "../data/index";
 import { makanan } from "../data/makanan";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// import { semuaKelas } from "../data/semuaKelas";
 // Import Swiper styles
 
 import "swiper/css";
@@ -13,7 +14,6 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import { semuaKelas } from "../data/semuaKelas";
 
 const HomePage = () => {
   return (
@@ -55,7 +55,6 @@ const HomePage = () => {
           </Row>
         </Container>
       </header>
-
 
       <div className="peta">
         <Container>
@@ -136,7 +135,7 @@ const HomePage = () => {
                     <p className="mb-3 px-3">{semuaKelas.ulasan}</p>
                     <div className="button justify-content-between align-items-center mx-4 px-5">
                       <a href="/Selengkapnya">
-                        <button className="btn btn-outline-warning rounded-15 mb-2">
+                        <button className="btn btn-outline-warning rounded-15 mb-1 ">
                           {semuaKelas.buy}
                         </button>
                       </a>
@@ -149,15 +148,12 @@ const HomePage = () => {
         </Container>
       </div>
 
-
       <div className="review">
         <Container data-aos="fade-down">
           <Row>
             <Col>
               <h5 className="text-center text-warning">Ulasan</h5>
-              <h3 className="text-center fw-bold">
-                Pecinta Kuliner
-              </h3>
+              <h3 className="text-center fw-bold">Pecinta Kuliner</h3>
             </Col>
           </Row>
           <Row>
@@ -188,22 +184,22 @@ const HomePage = () => {
               modules={[Pagination]}
               className="mySwiper"
             >
-              {dataSwiper.map((data,kelas)=> {
+              {dataSwiper.map((data, kelas) => {
                 return (
                   <SwiperSlide key={data.id} className="shadow-rounded">
-                     <div className="people">
-                      <img src={data.image} alt="" />
+                    <div className="people">
+                      <img className="gambarUlasan" src={data.image} alt="" />
                       <div>
-                      <h5 className="mb-2 mx-3">{data.name}</h5>
-                      <h6 className="mb-2 mx-3">{data.skill}</h6>
-                      <p className="desc mx-3">{data.desc}</p>
-                          <div className="star mb-2 px-3"> 
-                            <i className={kelas.star1}></i>
-                            <i className={kelas.star2}></i>
-                            <i className={kelas.star3}></i>
-                            <i className={kelas.star4}></i>
-                            <i className={kelas.star5}></i>
-                          </div>
+                        <h5 className="mb-2 mx-3">{data.name}</h5>
+                        <h6 className="mb-2 mx-3">{data.skill}</h6>
+                        <p className="desc mx-3">{data.desc}</p>
+                        <div className="star mb-2 px-3">
+                          <i className={kelas.star1}></i>
+                          <i className={kelas.star2}></i>
+                          <i className={kelas.star3}></i>
+                          <i className={kelas.star4}></i>
+                          <i className={kelas.star5}></i>
+                        </div>
                       </div>
                     </div>
                   </SwiperSlide>

@@ -12,8 +12,8 @@ const SelengkapnyaMitra = () => {
             <h4>Pongek Or</h4>
             <img className="w-100 p-3 shadow rouded" src={mitra1} alt="" />
           </Col>
-          <Col xs={4} >
-            <h5 className="fw-bold">Informasi Rumah Makan</h5>
+          <Col xs={4}>
+            <h5 className="fw-bold pt-5">Informasi Rumah Makan</h5>
             <div className="d-flex flex-column">
               <p>Alamat : Jl. Khatib Sulaiman , Payakumbuh</p>
               <p>Telepon : 0821 5670 4323 </p>
@@ -23,7 +23,7 @@ const SelengkapnyaMitra = () => {
             </div>
           </Col>
           <Col xs={3}>
-            <div className="text-center">
+            <div className="text-center pt-5">
               <p className="rating d-flex justify-content-center">4.5</p>
               <span className="fa fa-star checked"></span>
               <span className="fa fa-star checked"></span>
@@ -64,7 +64,7 @@ const SelengkapnyaMitra = () => {
                 <img
                   src={mit.image}
                   alt="unsplash.com"
-                  className="w-100 mb-5 rounded-top"
+                  className="w-100 mb-3 rounded-top"
                 />
                 <h5 className="mb-1 px-3">{mit.title}</h5>
 
@@ -76,7 +76,7 @@ const SelengkapnyaMitra = () => {
                   <i className={mit.star5}></i>
                 </div>
 
-                <p className="m-3 text-secondary fw-bold">{mit.price}</p>
+                <p className="m-4 mt-4 text-secondary ">{mit.price}</p>
                 <div className="ket d-flex justify-content-between align-items-center px-3">
                   <button className="btn btn-warning rounded-1 mb-2">
                     {mit.buy}
